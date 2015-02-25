@@ -7,6 +7,7 @@
 #
 # This version is working as at 25-Feb-2015
 # As/When cloudflare change their API amendments may be required
+# Latest versions of these scripts are here: https://github.com/jonegerton/cloudflare-ddns
 #
 # Place at:
 # /usr/local/bin/cf-ddns.sh
