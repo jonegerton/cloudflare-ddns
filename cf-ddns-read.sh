@@ -8,6 +8,7 @@
 #
 # This version is working as at 25-Feb-2015
 # As/When cloudflare change their API amendments may be required
+# Latest versions are here: https://github.com/jonegerton/cloudflare-ddns
 
 cfkey=API_KEY_HERE
 cfuser=EMAIL_HERE
