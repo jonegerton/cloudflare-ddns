@@ -5,6 +5,8 @@ These scripts are working as at 08-Aug-2018. Changes to the api by CloudFlare wi
 
 CloudFlare's documentation for the Apis used [is here](https://api.cloudflare.com).
 
+These scripts are also discussed [at my blog here](http://www.jonegerton.com/raspberrypi/cloudflare-ddns-updates-aug-2018-edition/)
+
 ####cf-ddns.sh:
 
 Updates CloudFlare for DDNS
