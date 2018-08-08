@@ -1,21 +1,24 @@
 #!/bin/sh
-# Reads all dns records for a cloudflare hosted domain.
+# Reads a dns records for a desired host from cloudflare hosted zone.
 # Use this to get the domain id required for cloudflare ddns updates 
-# (is rec_id in the saved json at ~/.cf-dns.txt)
+# (is ID in the saved json at cf-ddns.json)
 #
-# Created 25-Feb-2015 Jon Egerton, from the rec_load_all documentation here: 
-# https://www.cloudflare.com/docs/client-api.html
+# Created 8-Aug-2018 Jon Egerton, from the Cloudflare API V4 documentation here: 
+# https://api.cloudflare.com/#dns-records-for-a-zone-dns-record-details
 #
-# This version is working as at 25-Feb-2015
+# This version is working as at 8-Aug-2018
 # As/When cloudflare change their API amendments may be required
 # Latest versions are here: https://github.com/jonegerton/cloudflare-ddns
+#
+# Use strictly at your own risk
 
-cfkey=API_KEY_HERE
-cfuser=EMAIL_HERE
-domain=DOMAIN_HERE
+#Set values below
+cfuser= #Account user name
+cfkey= #Global API Key from My Account > API Keys
+cfzonekey= #Zone ID from zone overview page
+cfhost= #Name of the host entry
 
-curl https://www.cloudflare.com/api_json.html \
-  -d a=rec_load_all \
-  -d tkn=$cfkey \
-  -d email=$cfuser \
-  -d z=$domain > $HOME/.cf-dns.txt
+curl -X GET "https://api.cloudflare.com/client/v4/zones/$cfzonekey/dns_records?type=A&name=$cfhost" \
+  -H "X-Auth-Key: $cfkey " \
+  -H "X-Auth-Email: $cfuser" \
+  -H "Content-Type: application/json" > ./cf-ddns.json
