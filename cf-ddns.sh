@@ -13,9 +13,9 @@
 #
 # To schedule:
 # run `crontab -e` and add next line (without the leading #):
-# /5 * * * * bash {set file location here}/cf-ddns.sh >/dev/null 2>&1
+# */5 * * * * bash {set file location here}/cf-ddns.sh >/dev/null 2>&1
 # this will run the script every 5 minutes. The IP is cached, so requests are only sent 
-# when the WAN IP has changed
+# when the WAN IP has changed. Log output is minimal, so shouldn't grow too large.
 #
 # Use strictly at your own risk
 
