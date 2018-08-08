@@ -9,7 +9,7 @@ CloudFlare's documentation for the Apis used [is here](https://api.cloudflare.co
 
 Updates CloudFlare for DDNS
 Based on the commented update by @deluxor on here: https://gist.github.com/larrybolt/6295160
-
+Since modified to track CloudFlare API updates
 
 ####cf-ddns-read.sh:
 
