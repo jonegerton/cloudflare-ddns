@@ -7,6 +7,8 @@ CloudFlare's documentation for the Apis used [is here](https://api.cloudflare.co
 
 These scripts are also discussed [at my blog here](http://www.jonegerton.com/raspberrypi/cloudflare-ddns-updates-aug-2018-edition/)
 
+There's also a [golang implementation available](https://github.com/jonegerton/go-cloudflare-ddns).
+
 #### cf-ddns.sh:
 
 Updates CloudFlare for DDNS
